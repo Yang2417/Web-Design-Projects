@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<style>
+    main{
+  background: url(https://i.pinimg.com/564x/79/cb/5a/79cb5ace18d7d96be687f319c3938782.jpg);
+  text-align:center;
+  font-size: 20px;
+  font-family:Arial, sans-serif;
+}
+
+h1{
+  font-family: Lobster;
+  font-size: 80px;
+  text-align:center;
+  color: #5e41a1;
+  margin-bottom: -20px;
+  }
+nav{
+  font: arial;
+  text-align: left;
+  }
+a:hover{
+  color: red;
+}
+#img-div{
+  background: #e0d4fa;
+  padding: 20px;
+  margin:0 10px 0 10px;
+}
+img{
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+@media(min-width:300px){
+  img{
+    width:300px;
+  }
+}
+figcaption{
+  font-size: 20px;
+  color: gray;
+}
+#Info{
+  text-align: left;
+  background: #e0d4fa;
+  opacity: 90%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 1px;
+  }
+h2{
+  color: #5e41a1;
+  margin-left: 20px;
+  font-family: Varela Round;
+  font-size:30px;
+  }
+  @media (min-width:400px){
+      h2{
+          font-size: 40px;
+      }
+  }
+#History{
+  text-align: left;
+  background: #e0d4fa;
+  opacity: 90%;
+  margin-left:10px;
+  margin-right: 10px;
+  padding: 10px;
+  padding-bottom: 1px;
+}
+h3{
+   color: #5e41a1;
+  margin-left: 20px;
+  font-family: Varela Round;
+  font-size:40px;
+  margin-top: -5px;
+}
+h4{
+  grid-area: header;
+  color: #5e41a1;
+  font-family: Varela Round;
+  font-size:40px;
+  padding: 0px;
+  margin: 0px;
+ }
+.img1{
+  grid-area:image1;
+  height: 100%;
+  border-radius: 10%
+}
+.img2{
+  grid-area:image2;
+  border-radius: 10%
+  }
+.img3{
+  grid-area:image3;
+  height: 100%;
+  border-radius: 10%;
+}
+#Gallery{
+  background: #e0d4fa;
+  display: grid;
+  padding: 10px;
+  padding-bottom: 20px;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4,auto);
+  grid-template-areas:
+    "header"
+    "image1"
+    "image2"
+    "image3";
+  grid-gap:10px;
+}
+@media (min-width:400px){
+  #Gallery{
+   grid-template-columns: repeat(3,auto);
+   grid-template-rows: auto auto;
+   grid-template-areas:
+    "header header header"
+    "image1 image2 image3";  
+    }
+}
+#Sources{
+  color:dark-gray;
+  padding: 10px;
+  
+}
+</style>
+<body>
+    <main id="main">
+        <h1 id="title"> SUMMER</h1>
+        <p>a cute pekingese dog</p>
+        <nav>
+          <ul>
+            <li><a href="#Info" accesskey="I">Information</a></li>
+            <li><a href="#History" accesskey="H">History</a></li>
+            <li><a href="#Gallery" accesskey="G">Gallery</a></li>
+            <li><a href="#Sources" accesskey="S">Sources</a></li>
+          </ul>
+        </nav>
+        <figure id="img-div">
+          <img id="image" src="https://scontent.xx.fbcdn.net/v/t1.15752-9/p75x225/252404786_1145763532498895_7957582932177996937_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=aee45a&_nc_ohc=kfLLd5ofrlgAX_KcxtK&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=eb192cf3a6f7d5e32632253d19b5e2f7&oe=61A8834B" alt="Pekingese dog looking at side-view mirror"/>
+          <figcaption id="img-caption">rare photo of a pekingese driving</figcaption>
+        </figure>
+        <div id="tribute-info">
+          <section id="Info">
+            <h2><strong>INFORMATION</strong></h2>
+            <ul>
+              <li><strong>Name:</strong> Summer</li>
+              <li><strong>Birthdate:</strong> January 23, 2021</li>
+              <li><strong>Gender:</strong> Female (prefers She/Her pronouns)</li>
+              <li><strong>Breed:</strong> Pekingese</li>
+              <li><strong>Parents:</strong> Roxy(mom) & father (unknown)</li>
+              <li><strong>Siblings:</strong> Chimmy & Snow</li>
+            </ul>
+          </section>
+          <br>
+          <section id="History">
+            <h3>History</h3>
+            <p>Summer was the great-grandchild of Pekingese immigrants to the Philippines. Summer was born to Roxy, a single-mom, on her mother's house in Las Pinas on early 2021, the second of three pups. Her siblings are Chimmy (b.2021) and Snow (b.2021). At 7 months old, Summer left on her own to pursue an independent lifestyle. She worked as a professional cuddler and a guard dog at the same time. She learned tricks, games, and commands (mostly, sit) through self-study</p>
+          <p>At 10 months old, she reunited with her mother and sibling Snow. However, her sibling is indifferent from her affections and this led to an altercation. Until now, no lawsuit was filed for this incident.</p>
+          </section>
+          <br>
+          <section id="Gallery">
+            <h4>Gallery</h4>
+            <img class="img1" src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/252350724_2957928354424174_6379602771739326041_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_ohc=bISUigiK3dYAX83ot3z&_nc_ht=scontent.fmnl4-1.fna&oh=66b9810011c299b09bd1a8a4766fd7cd&oe=61A8FE0D"/>
+            <img class="img2" src="https://scontent.fmnl4-4.fna.fbcdn.net/v/t1.15752-9/250951105_620839765609520_3955050072257476324_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=ae9488&_nc_ohc=RYVW85Mg35MAX-uJJxV&_nc_ht=scontent.fmnl4-4.fna&oh=562bb0aa59526e0369606688b0e58807&oe=61A68D7F"/>
+            <img class="img3" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/252463311_7051081898242642_4389424379507701759_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_ohc=A0CQr4Brw-UAX-ktQIt&tn=wKhaHkP-0okuirbd&_nc_ht=scontent.fmnl4-2.fna&oh=438756eaf976ec55ad89e60844a54a95&oe=61A8ECE9"/>
+          </section>
+          <br>
+          <section id="Sources">
+            <h5>Know more about the bread with this <a id="tribute-link" href="https://en.wikipedia.org/wiki/Pekingese" target="_blank"> link.</a></h5>
+          </section>
+          </main>
+                     
+    
+</body>
+</html>
