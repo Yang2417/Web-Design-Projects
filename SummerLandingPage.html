@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: beige;
+    }
+    header{
+        width: 100%;
+        opacity: 80%;
+        background: beige;
+        position: fixed;
+        top: 0;
+        display:grid;
+        grid-template-areas:
+        "logo"
+        "nav"
+        "header";
+       
+    }
+    @media(min-width: 400px){
+        header{
+        grid-template-columns: 40% 60%;
+        grid-column-gap: 0px;
+        grid-template-areas:
+        "logo nav"
+        "logo header";
+        }
+    }
+    #header-img{
+        width:5cm;
+        height: 5cm;
+        padding: 0px;
+        margin-top: 0px;
+        display: block;
+        margin:auto;
+        grid-area: logo;
+    }
+    @media(min-width){
+        #header-img{
+            margin-top: 0px; 
+        }
+    }
+    h1{
+        text-align: center;
+        margin-top:-5px;           
+        color: rgb(250, 208, 23);
+        grid-area: header;
+        font-size: 50px;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+    li{
+        list-style: none;
+        display: inline;
+        padding: 15px;
+        
+    }
+    a{
+        color: coral;
+        text-decoration: none;
+        font-size: 17px;
+               
+    }
+    h2{
+        text-align: center;
+        grid-area:header1;
+        color: coral;
+        font-size: 50px;
+    }
+    .feature1{
+        grid-area: image1;
+        width: 100px;
+        height:100px;
+        display: block;
+        margin: auto;
+        border-radius: 5%;
+    }
+    .feature2{
+        grid-area: image2;
+        width: 200px;
+        height:100px;
+        display: block;
+        margin: auto;
+        border-radius: 5%;
+    }
+    .feature3{
+        grid-area: image3;
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: auto;
+        border-radius: 5%;
+    }
+    figcaption{
+        text-align: center;
+    }
+
+    .feature-box{
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows:auto auto auto auto;
+        grid-gap: 10px;
+        grid-template-areas:
+        "header1"
+        "image1"
+        "image2"
+        "image3";
+    }
+    @media (min-width: 400px){
+        .feature-box{
+        grid-template-columns:auto auto auto;
+        grid-template-rows:auto auto ;
+        grid-template-areas:
+        "header1 header1 header1"
+        "image1 image2 image3";
+        }
+    }
+    figcaption{
+        display: none;
+        margin:auto;
+        color: rgb(132, 158, 94);
+    }
+    @media (min-width: 400px){
+        figcaption{
+            display: inline;
+        }
+    }
+    h3{
+        text-align: center;
+        color: coral;
+        font-size: 50px;
+    }
+    iframe{
+        display: block;
+        margin:auto;
+    }
+    h4{
+        text-align: center;
+        color: coral;
+        font-size: 50px;
+        grid-area: header2;
+    }
+    .article1{
+        border-style: solid;
+        border-radius: 5%;
+        border-width:px;
+        border-color:rgb(250, 208, 23);
+        background:rgb(238, 234, 234);
+        grid-area: a1;  
+        text-align: center;         
+    }
+    .babyplay{
+        width:200px;
+        height: 150px;
+        display: block;
+        margin: auto;
+        border-radius: 2px;
+    }
+    .article2{
+        border-radius: 5%;
+        border-width:3px;
+        border-color:rgb(250, 208, 23);
+        background:rgb(238, 234, 234);
+        border-style: solid;
+        grid-area: a2;      
+        text-align: center;       
+    }
+    .roleplay{
+        width:150px;
+        height: 150px;
+        display: block;
+        margin: auto;
+        border-radius: 2px;
+    }
+    .article3{
+        border-radius: 5%;
+        border-width:3px;
+        border-color:rgb(250, 208, 23);
+        background:rgb(238, 234, 234);
+        border-style: solid;
+        grid-area: a3;  
+        text-align: center;           
+    }
+    .dogs{
+        width:150px;
+        height: 150px;
+        display: block;
+        margin: auto;
+        border-radius: 2px;
+    }
+    .order-box{
+        
+        display:grid;
+        grid-template-columns:auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "header2"
+        "a1"
+        "a2"
+        "a3";
+    }
+    @media (min-width: 400px){
+        .order-box{
+        display:grid;
+        grid-template-columns:auto auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 20px;
+        grid-template-areas:
+        "header2 header2 header2"
+        "a1 a2 a3";}
+
+    }
+    h5{
+        text-align: center;
+        background: rgb(132, 158, 94);
+        padding: 10px;
+        color:rgb(238, 234, 234);
+        font-size: 20px;
+        margin-top: 1mm;
+        border-radius: 20%
+    }
+    h6{
+        text-align: center;
+        font-size: 20px;
+    }
+    .want{
+        background:rgb(255, 242, 185);
+        border-radius: 10%;
+        border-width: 1px;
+    }
+    .want:hover{
+        background:rgb(192, 181, 131);
+    }
+    .gap{
+        margin-top: 90px;
+    }
+    #container{
+        margin-top: 250px;
+    }
+    @media (min-width: 400px){
+        #container{
+            margin-top: 70px;
+        }
+    }
+
+    </style>
+<body>
+    <header id="header">
+        <img id="header-img" alt="Summer Logo" src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/252928158_879804646071825_5316730632807900753_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_ohc=vz8Az7l_GgIAX9dogMP&_nc_ht=scontent.fmnl4-1.fna&oh=112b486f7efa2d2a3904e35c548a2a9d&oe=61AB8591"/>
+        <h1><strong>The place for SUMMER needs!</strong></h1>
+        <nav id="nav-bar">
+            <ul>
+                <li><a class="nav-link" href="#Features">Features</a></li>
+                <li><a class="nav-link" href="#Mechanism">Mechanism</a></li>
+                <li><a class="nav-link" href="#Order">Order Now!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <div class="gap">
+    </div>
+    <br>
+    <main id="container">
+        <br>
+        <section id="Features" class="feature-box">
+            <h2><strong>Features</strong></h2>
+            <img class="feature1" src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t1.15752-9/253181939_626613508496196_7266617330505104899_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=ae9488&_nc_ohc=e1DOl32SpA8AX-EIBlt&tn=cwc8WR9mqaOy7hD9&_nc_ht=scontent.fmnl4-1.fna&oh=697a94c511d4f56b6babfa5f12e73487&oe=61ACF330"/>
+            <figcaption>NICE SMILE</figcaption>
+            <img class="feature2" src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/254133272_209107198030465_938752650830440926_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=GI6nyFFz0MgAX827hE1&_nc_ht=scontent.fmnl4-6.fna&oh=d9e86e1e5b2aedd79805299cc4eed3d9&oe=61AA218F"/>
+            <figcaption>SMOL BODY</figcaption>
+            <img class="feature3" src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t1.15752-9/251990952_192020266450537_5882847135284692656_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_ohc=zRNB_J-q3ksAX_L-kj3&_nc_ht=scontent.fmnl4-5.fna&oh=10a65184754c43aa1bea9e3218626d88&oe=61AAB6BC"/>
+            <figcaption>BIG EYES</figcaption>
+        </section>
+        <section id="Mechanism">
+            <h3>Mechanism</h3>
+            <iframe
+        id="video"
+        height="350" width="500" src="https://www.youtube.com/embed/4ZgbiP3zuE4" frameborder="0" allowfullscreen></iframe>
+        </iframe>
+        </section>
+        <section id="Order" class="order-box">
+            <h4><strong>Order Here!</strong></h4>
+            <article class="article1">
+                <h5><strong>BABY PLAY</strong></h5>
+                <img class="babyplay" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/253085138_4588280314590361_1641061704213514165_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=ae9488&_nc_ohc=7saVmpBqpcYAX_xSfoa&tn=cwc8WR9mqaOy7hD9&_nc_ht=scontent.fmnl4-2.fna&oh=f9354d314e52cd504fc81493e55a985e&oe=61ADFCCA"/>
+                <h6><strong>$299/month</strong></h6>
+                <p>With <strong>FREE</strong> diaper and toys!</p>
+                <button onclick="alert('Nope')" class="want"><strong>I WANT!</strong></button>
+            </article>
+            <article class="article2">
+                <h5><strong>ROLEPLAY</strong></h5>
+                <img class="roleplay" src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t1.15752-9/251520435_1268758853587165_4867705952552328657_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=ae9488&_nc_ohc=KPGVP35iHacAX-ROojd&_nc_ht=scontent.fmnl4-5.fna&oh=6739d5e939fb81a51814de53c301a391&oe=61AC7391"/>
+                <h6><strong>$399/month</strong></h6>
+                <p>Costume not included</p>
+                <button onclick="alert('Out of Stock')" class="want"><strong>I WANT!</strong></button>
+            </article>
+            <article class="article3">
+                <h5><strong>2DOGS 1HOOMAN</strong></h5>
+                <img class="dogs" src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/252917034_317574069789198_3876249685541247633_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=ae9488&_nc_ohc=zQoVmHK6b60AX9cKllC&_nc_ht=scontent.fmnl4-6.fna&oh=8b683c07d5565ec65385402b6648de61&oe=61ACD990"/>
+                <h6><strong>$499/month</strong></h6>
+                <p>Add $100 for additional dog</p>
+                <button onclick="alert('Additional dog is fully booked')" class="want"><strong>I WANT!</strong></button>
+            </article>
+        </section>
+    </main>
+    <br>
+    <footer>
+        <form id="form" onsubmit="alert('Arf!!')" action="https://www.freecodecamp.com/email-submit">
+            <div id="subscribe" style="font-size:20px;">Subscribe</div>
+            <input name="email" type="email" placeholder="Enter Email Address" id="email"/>
+            <input id="submit" type="submit" class="want"/>
+        </form>
+    </footer>
+    
+</body>
+</html>
