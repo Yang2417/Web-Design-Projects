@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <style>
+    main{
+        background: rgb(29, 31, 54);
+        background-size:cover;
+        position:fixed;
+        background-position: center;
+        }
+    .Head{
+        background-color:rgb(190, 217, 241);
+        padding: 0px;
+        text-align: center;
+        margin: 20px 20px 0px 20px;
+        opacity: 90%;
+        border-radius: 10px;
+        box-shadow: 5px 2px 10px 5px rgb(235, 150, 80);
+    }
+    #title{
+        font-family:'Courier New', Courier, monospace;
+        font-size: 40px;
+        margin-bottom: 0px;
+        color:rgb(48, 89, 150);
+    }
+    #description{
+        margin-top: 0px;
+        font-family:'Courier New', Courier, monospace;
+        font-style: italic;
+    }
+    #survey-form{
+        background:rgb(190, 217, 241);
+        margin: 20px 30px 20px 30px;
+        opacity: 90%;
+        border-radius: 10px;
+        box-shadow: 5px 2px 10px 5px rgb(255, 255, 255);
+    }
+    .QuestionBlock{
+        background:rgb(190, 217, 241);
+        border-radius: 10px;    
+        font-family:'Courier New', Courier, monospace; 
+        text-align: left;
+        margin-left: 7px;  
+        color:rgb(48, 89, 150); 
+        font-weight: bold;
+    }
+    .AnswerBox{
+      background:rgb(29, 31, 54);
+      border-radius: 5px;
+      border-color:rgb(235, 150, 80);
+      border-width: 3px;
+      margin-top: 5px;
+      width: 10cm;
+      color: rgb(211, 242, 250);
+    }
+    #comments{
+      background:rgb(29, 31, 54);
+      border-radius: 5px;
+      border-color:rgb(235, 150, 80);
+      border-width: 3px;
+      margin-top: -10px;
+      width: 12cm;
+      height: 5cm;
+      color: rgb(211, 242, 250);
+      margin-left: 18px;
+    }
+    button{
+      background:rgb(29, 31, 54);
+      color: rgb(211, 242, 250);
+      border-radius: 5px;
+      border-color:rgb(235, 150, 80);
+      border-width: 3px;
+    }
+    button:hover{
+      background:rgb(66, 77, 109);
+    }
+     
+ </style>
+    <main>
+        <header class="Head">
+          <h1 id="title"><strong>eSCAPE SURVEY</strong></h1>
+          <p id="description">let us know what's on your mind</p>
+        </header>
+        <form id="survey-form">
+          <section class="QuestionBlock">
+          <label id="name-label" for="name">NAME:</label>
+          <br>
+          <input class="AnswerBox" type="text" id="name" name="name" placeholder="Enter your name" required/>
+          </section>
+          <section class="QuestionBlock">
+          <label id="email-label" for="email">E-MAIL:</label><br>
+            <input class="AnswerBox"  type="email" id="email" name="email" placeholder="Enter your valid e-mail address" class="form-control" required/>
+          </section>
+          <section class="QuestionBlock">
+          <label id="number-label" for="number">AGE:</label><br>
+            <input class="AnswerBox"  type="number" id="number" name="age" min="6" max="100" placeholder="Age"/>
+          </section>
+         <section class="QuestionBlock">
+          <label id="date-label" for="date">DATE OF LAST VISIT:</label><br>
+            <input class="AnswerBox"  type="date" id="date" name="date"/>
+          </section>
+         <section class="QuestionBlock">
+          <label id="dropdown-label" for="dropdown">HOW OFTEN DO YOU PLAY ESCAPE GAMES:</label><br>
+            <select class="AnswerBox"  id="dropdown" name="Frequency" required/>
+            <option disabled selected value>Select from the following</option>
+            <option value="never">Never</option>
+            <option value="seldom">Seldom</option>       <option value="sometimes">Sometimes</option>  
+            <option value="frequently">Frequently</option>
+              <option value="always">Always</option>
+            </select>
+          </section>
+          <section class="QuestionBlock">
+            <p id="dropdown">WHAT ARE YOUR FAVORITE THEMES:<span class="caption">(select all that apply)</span> </p>
+            <label
+              ><input
+                name="prefer"
+                value="zombie-escape"
+                type="checkbox"
+                class="input-checkbox"
+              />Zombie Escape</label
+            ><br>
+            <label
+              ><input
+                name="prefer"
+                value="jailbreak"
+                type="checkbox"
+                class="input-checkbox"
+              />Jail Break</label
+            >
+            <br>
+            <label
+              ><input
+                name="prefer"
+                value="timemachine"
+                type="checkbox"
+                class="input-checkbox"
+              />Time Machine</label>
+            <br>
+            <label
+              ><input
+                name="prefer"
+                value="hauntedhouse"
+                type="checkbox"
+                class="input-checkbox"
+              />Haunted House</label>
+              <br>
+            <label
+              ><input
+                name="prefer"
+                value="sherlock"
+                type="checkbox"
+                class="input-checkbox"
+              />Sherlock Holmes Mystery</label>
+              <br>
+            <label
+              ><input
+                name="prefer"
+                value="heist"
+                type="checkbox"
+                class="input-checkbox"
+              />Money Heist</label>
+            </section>
+           <section class="QuestionBlock">
+             <p>WOULD YOU RECOMMEND OUR ESCAPE ROOM TO YOUR FRIENDS?</p>
+               <label>
+              <input
+                name="user-recommend"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />Definitely</label
+            >
+            <label>
+              <input
+                name="user-recommend"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />Maybe</label
+            >
+            <label><input
+                name="user-recommend"
+                value="not-sure"
+                type="radio"
+                class="input-radio"
+              />Not sure</label>
+        </section>
+        <section class="QuestionBlock">
+          <p>COMMENTS OR SUGGESTIONS?</p>
+          <textarea id="comments"
+              class="input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+            ></textarea>
+        </section>
+        <section class="QuestionBlock">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+          </section>
+        </form>
+      </main>
+       
+         
+</body>
+</html>
