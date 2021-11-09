@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechnicalDocument</title>
+</head>
+<style>
+    body{
+        background: rgb(250, 247, 247);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #navbar{
+        position: fixed;
+        width: 200px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #C4ebf1;
+        border-right: solid;
+        border-color: #023047;
+        border-width: 5px;
+        
+        
+    }
+    img{
+        height: 100px;
+        width: 100px;
+        display: block;
+        margin: auto;
+        padding-top: 10px;      
+    
+    }
+    h1{
+        text-align: center;
+        color: lightslategrey;
+        font-size: 50px;
+        padding-bottom: 50px;
+       
+    }
+    .nav-link{
+        text-decoration: none;
+        color: #e27900;
+        font-weight: bolder;
+        font-size: large;
+        
+    }
+    .nav-link:hover{
+        color: blue;
+    }
+    #navbar li{
+        left: 0;
+        list-style: none;
+        padding: 10px;
+        border-top: solid;
+        border-color: #023047;
+        position: relative;
+       
+        
+    }
+    #navbar ul{
+        padding: 0;
+
+    }
+    #main-doc{
+        position: absolute;
+        margin-left: 200px;
+        padding: 20px;
+    }
+    #main-doc header{
+        font-size: 20px;
+        font-weight: bolder;
+        color: rgb(226, 173, 38);
+        background: rgb(255, 255, 215);
+        padding: 5px;
+    }
+    #main-doc header:hover{
+        animation-name: gradient;
+        animation-duration: 2s;
+        animation-iteration-count:1;
+    }
+    @keyframes gradient{
+        25%{
+            background:rgb(241, 241, 229);
+        }
+        50%{
+            background: rgb(239, 242, 243);
+            
+        }
+        75%{
+            background:rgb(228, 238, 247)
+        }
+        100%{
+            background:rgb(213, 235, 255);
+        }
+    }
+    #main-doc section{
+        text-align: justify;
+    }
+    #CodeStyle{
+        background:rgb(208, 240, 243);
+        padding: 10px;
+
+
+    }
+    code{
+        background:rgb(208, 240, 243);
+    }
+    #main-doc li{
+        padding: 2px;
+        list-style: square;
+    }
+    #main-doc a{
+        color: #e27900;
+        text-decoration:none;
+    }
+    #main-doc a:hover{
+        color: blue;
+    }
+    @media only screen and (max-width: 815px) {
+  /* For mobile phones: */
+   
+  #navbar li{
+    padding: 2px;
+    border-top: none;
+    border-bottom: solid;
+    border-color: #023047;
+    position: relative;
+   }
+   #navbar header{
+    border-bottom: solid;
+    border-color: #023047;
+    margin-bottom: -15px;
+   }
+
+  #navbar {
+    background: #C4ebf1;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 300px;
+    border: none;
+    z-index: 1;
+   
+  }
+  #main-doc {
+    position: relative;
+    margin-left: 0px;
+    margin-top: 470px;
+  }
+}
+
+
+
+    
+
+</style>
+<body>
+    <nav id="navbar">
+        <header>
+            <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.15752-9/255229756_637788770936133_2262543575298292793_n.png?_nc_cat=109&ccb=1-5&_nc_sid=ae9488&_nc_ohc=Wo2wSJrP350AX84co5t&_nc_ht=scontent-nrt1-1.xx&oh=6c0216ccc33c4d318a8f45022e7cb036&oe=61AF487C">
+            <h1>python</h1>
+        </header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Hello_Python!">Hello Python!</a></li>
+            <li><a class="nav-link" href="#Variables">Variables</a></li>
+            <li><a class="nav-link" href="#Operations">Operations</a></li>
+          <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
+            <li><a class="nav-link" href="#References">References</a></li>
+
+        </ul>
+        
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>
+            What is Python?
+            Python is a popular programming language. It was created by Guido van Rossum, and released in 1991.
+            It is used for:
+              <ul>
+                  <li>web development (server-side)</li>
+                  <li>software development</li>
+                  <li>mathematics</li>
+                  <li>system scripting</li>
+              </ul>
+            </p>
+            <p>
+            Python was designed for readability, and has some similarities to the English language with influence from mathematics. Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses. Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.
+            </p>
+        </section>
+        <section class="main-section" id="Hello_Python!">
+            <header>Hello Python!</header>
+            <p>
+                Python is a very simple language, and has a very straightforward syntax. It encourages programmers to program without boilerplate (prepared) code. The simplest directive in Python is the "print" directive - it simply prints out a line (and also includes a newline, unlike in C). 
+            </p>
+            <p>
+                To print a string in Python 3, just type:[ <code>print("Hello Python!)</code>] and execute code. 
+            </p>        
+        </section>
+        <section class="main-section" id="Variables">
+            <header>Variables</header>
+            <p>
+                Python is completely object oriented, and not "statically typed". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.
+            </p>
+            <ul>
+                <li>Numbers</li>
+                <p>Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals). For example:</p>
+                <div id="CodeStyle">
+                <code>x = 7</code>
+                <br><code>print (x)</code>
+            </div>
+                <br>
+                <li>Strings</li>
+                <p>Strings are defined either with a single quote or a double quotes. For example:</p>
+            <div id="CodeStyle">
+                <code>mystring = "Hello Python!"</code>
+                <br><code>print (mystring)</code>
+            </div>
+                <br>
+            </ul>
+        </section>
+        <section class="main-section" id="Operations">
+            <header>Operations</header>
+            <p>Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers. For example:</p>
+            <div id="CodeStyle">
+            <code>number = 1 + 2 - 3 * 4 / 5</code>
+            <br><code>print (number)</code>
+            </div>
+            <br>
+        </section>
+        <section class="main-section" id="Conditionals">
+            <header>Conditionals</header>
+            <p>Python supports the usual logical conditions from mathematics:</p>
+            <ul>
+                <li>Equals: <code>a == b</code></li>
+                <li>Not Equals: <code>a != b</code>    
+                <li>Less than: <code> a < b</code></li>    
+                <li>Less than or equal to: <code>a <= b</code> </li>    
+                <li>Greater than: <code>a > b</code></li>
+                <li>Greater than or equal to: <code>a >= b</code> </li>
+            </ul>
+            <p>These conditions can be used in several ways, most commonly in "if statements" and loops. An "if statement" is written by using the <code>if</code> keyword. Example:</p>
+            <div id="CodeStyle">
+            <code> a = 33</code>
+            <br><code>b = 200</code>
+            <br><code>if b > a:</code>
+            <br><code>  print("b is greater than a")</code>
+            </div>
+            <p>In this example we use two variables, a and b, which are used as part of the if statement to test whether b is greater than a. As a is 33, and b is 200, we know that 200 is greater than 33, and so we print to screen that "b is greater than a".</p>
+
+        </section>
+        <section class="main-section" id="References">
+            <header>References</header>
+            <p>The contents of this page are taken from:</p>
+            <ul>
+                <li><a href="https://www.w3schools.com/python/default.asp">w3schools</a></li>
+                <li><a href="https://www.learnpython.org/">learnpython</a></li>
+            </ul>
+            <p> Click the links to learn more about <a href="https://www.python.org/">Python</a></p>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>
